@@ -1,0 +1,842 @@
+body{
+    overflow-x: hidden;
+}
+
+.logo{
+    width: 12vw;
+}
+
+.logo img {
+    width: 10vw;
+    position: relative;
+    top: -1vw;
+}
+
+.nav-items {
+position: relative;
+left: -4vw;
+top: -0.5vw;
+}
+
+.nav-items ul{
+list-style: none;
+display: flex;
+}
+
+.nav-items ul li{
+    padding: 0vw 1vw;
+}
+
+.nav-items ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: "Bree Serif", serif;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    padding: 3px 22px;
+}
+
+.nav-items ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+.navbar{
+    height: 5vw;
+}
+
+.navbar::before{
+    content: "" ;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    }
+
+    /* banner section */
+.banner{
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        height: 650px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -7vw;
+    }
+
+.banner::before{
+        content: "" ;
+        position: absolute; 
+        background:url('../images/listing-banner.png') no-repeat center center/cover;
+        height: 125%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        opacity: 1;
+}
+.ban-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    width: 28vw;
+    position: relative;
+    top: -8vw;
+    left: -28vw;
+}
+.banner h1{
+    color: white;
+    text-align: center;
+    font-family: "Protest Revolution", sans-serif;
+}
+
+
+.banner p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Bree Serif", serif;
+
+} 
+
+.btn{
+    color: white !important;
+    border: 1px solid !important;
+    background-color: rgba(129, 98, 143, 0.473) !important;
+    position: relative;
+    /* left: 31vw; */
+}
+/* listing form */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    max-width: 415px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    top: -15vw;
+    left: 8vw;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    font-size: 28px;
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: royalblue;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a {
+    color: royalblue;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input:valid + span {
+    color: green;
+  }
+  
+  .submit {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+  }
+  
+  .submit:hover {
+    background-color: rgb(56, 90, 194);
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+  
+/* about section  */
+.about-listing{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vw;
+
+}
+.list-head{
+    margin-top: -8vw;
+}
+.list-head h1{
+    text-align: center;
+    margin-bottom: 6vw;
+}
+.about-listing p{
+    font-family: "Bree Serif", serif;
+    text-align: center;
+}
+.features{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: space-around;
+}
+.reasons{
+    width: 24vw;
+    margin-bottom: 13vw;
+}
+.reasons h4{
+    font-size: x-large;
+}
+.reasons p{
+    font-size: large;
+}
+.reasons-algo{
+    width: 22vw;
+    margin-bottom: 13vw;
+    background-color: #f0f0f075;    
+    border: 0px solid #ddd;
+    border-radius: 5px;
+    height: 20vw;
+}
+.reasons-algo h4{
+    font-size: large;
+}
+.reasons-algo p{
+    font-size: medium;
+    width: 22vw;
+    padding: 2px 7px 2px 7px;
+}
+.reasons-algo img{
+    width: 140px;
+    height: 140px;
+    position: relative;
+    top: -3vw;
+    margin-bottom: -2vw;
+}
+    /* home kitchen */
+.grey-banner {
+    background-color: #bdbdbd;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    height: 39vw;
+    margin-bottom: 15vw;
+}
+/* css for meet section  */
+.cookieCard {
+    width: 85vw;
+    height: 45vw;
+    background: url(/images/home-kitchen.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    top: -10vw;
+    left: 5vw;
+    border-radius: 10px 10px 10px 10px ;
+  }
+  .cookieCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    z-index: 1; /* Ensure the shade is behind the content */
+    border-radius: 10px; /* Same border radius as the container */
+}
+  .cookieText{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+  
+  
+  .cookieHeading {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(241, 241, 241);
+    z-index: 2;
+  }
+  
+  .cookieDescription {
+    font-size: 0.9em;
+    color: rgb(241, 241, 241);
+    z-index: 2;
+    width: 32vw;
+  }
+  
+  .cookieDescription a {
+    color: rgb(241, 241, 241);
+  }
+  
+  .acceptButton {
+    padding: 11px 20px;
+    background-color: #7b57ff;
+    transition-duration: .2s;
+    border: none;
+    color: rgb(241, 241, 241);
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 2;
+  }
+  
+  .acceptButton:hover {
+    background-color: #714aff;
+    transition-duration: .2s;
+  }
+  /* css for meet section end */
+input[type="text"], textarea {
+    padding: 4px 13px 5px 27px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: 203px;
+    border-radius: 1.5vw;
+}
+.service {
+    display: flex;
+    justify-content: space-evenly;
+    height: 12vw;
+    align-items: center;
+    border: 0px solid black;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+    background-color: aliceblue;
+    background:url('../images/pak-bg.png') no-repeat center center/cover;
+
+}
+
+/* .service::before{
+    content: '';
+    background:url('../images/pak-bg.png') no-repeat center center/cover;
+} */
+button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #ff69b4; /* Pink color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px !important;
+}
+button:disabled {
+    background-color: #ccc; /* Grey color */
+    cursor: not-allowed;
+}
+.serv-btn{
+    position: relative;
+    left: -6vw;
+    top: 1.5vw;
+}
+.list-rest{
+    margin-top: 12vw;
+}
+.list-rest h2{
+    margin-left: 5vw;
+    margin-bottom: 3vw;
+}
+.list-rest img{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 466px;
+    object-fit: cover;
+    width: 100%;
+    vertical-align: baseline;
+    border: 0;
+}
+
+/* card in listing section */
+.card {
+    width: 38vw;
+    height: 254px;
+    border-radius: 20px;
+    background: #f5f5f5;
+    position: relative;
+    padding: 1.8rem;
+    border: 3px solid #c3c6ce;
+    transition: 0.5s ease-out;
+    overflow: visible;
+    top: -8vw;
+    left: 7vw;
+   }
+   
+   .card-details {
+    color: black;
+    height: 100%;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+   }
+   
+   .card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgb(239, 142, 194);
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+   }
+   
+   .text-body {
+    color: rgb(134, 134, 134);
+   }
+   
+   /*Text*/
+   .text-title {
+    font-size: 1.5em;
+    font-weight: bold;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: rgb(239, 142, 194);
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
+
+/* Our Partners */
+.partner{
+    display: flex;
+    justify-content: space-around;
+}
+.part-text{
+    text-align: center;
+    margin-bottom: 3vw;
+
+}
+#burger-lab{
+    height: 9vw;
+    align-self: center;
+}
+#swiggy{
+    height: 5vw;
+    align-self: center;
+}
+#uber-eats{
+    height: 3vw;
+    align-self: center;
+}
+#zomato{
+    height: 3vw;
+    align-self: center;
+}
+#part-sec{
+    margin-bottom: 6vw;
+}
+/* get-app */
+.get-app{
+    display: flex;
+    justify-content: space-evenly;
+    border: 0px solid black;
+    height: 8vw;
+    align-items: center;
+    background-color: rgb(240, 240, 245);
+}
+
+
+.get-app h2{
+    font-family: 'Bree Serif';
+    width: 36vw;
+    font-size: x-large;
+}
+
+/* Media Queries */
+@media screen and (max-device-width: 640px){
+    html{
+        width: 143vw;
+    }}
+@media screen and (max-device-width: 640px){
+    body{
+        width: 143vw;
+    }}
+
+@media screen and (max-device-width: 640px){
+.banner {
+    position: relative;
+    top: -13vw;
+    height: 641px;
+    margin-bottom: -35vw;
+}}
+
+@media screen and (max-device-width: 640px) {
+    .navbar{
+        height: 13vw;
+    }}
+@media screen and (max-device-width: 640px) {
+    .nav-items ul li a {
+        text-decoration: none;
+        color: white;
+        font-family: "Bree Serif", serif;
+        font-size: 0.9rem;
+        border-radius: 20px;
+        padding: 3px 6px;
+    }}
+@media screen and (max-device-width: 640px) {
+    .nav-items {
+            position: relative;
+            left: -2vw;
+            top: 1.5vw;
+    }} 
+@media screen and (max-device-width: 640px) {
+    .logo img {
+        width: 17vw;
+        position: relative;
+        top: 0vw;
+    }} 
+@media screen and (max-device-width: 640px) {
+    html{
+       width: 125vw;
+    }} 
+@media screen and (max-device-width: 640px) {
+    .ban-text{
+        position: relative;
+        top: 13vw;
+        width: 100vw;
+    }} 
+@media screen and (max-device-width: 640px) {
+    .btn {
+        color: white !important;
+        border: 1px solid !important;
+        background-color: rgba(129, 98, 143, 0.473) !important;
+        position: relative;
+        /* left: 35vw; */
+    }}
+
+/* about section query  */
+
+@media screen and (max-device-width: 640px){
+.abt-text {
+    width: 125vw;
+    margin: 6vw 22vw 19vw 22vw;
+}}
+@media screen and (max-device-width: 640px) {
+    .list-head {
+            margin-top: 30vw;
+    }}  
+
+
+    /* service section query */
+    
+@media screen and (max-device-width: 640px) {
+    .service {
+        height: 50vw;
+        padding: 1px 0px 13px 0px;
+        }}  
+@media screen and (max-device-width: 640px) {
+    .cities {
+        width: 40vw;
+        font-size: smaller;
+        }}  
+@media screen and (max-device-width: 640px) {                
+    .cities h2{
+        font-size: large;
+        }}  
+@media screen and (max-device-width: 640px) {
+    .area {
+        width: 40vw;
+        font-size: smaller;
+        }}  
+@media screen and (max-device-width: 640px) {
+    .area h2{
+        font-size: large;
+        }}  
+
+ @media screen and (max-device-width: 640px) {                   
+ input[type="text"], textarea {
+        padding: 1px 5px 0px 4px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        width: 159px;
+        border-radius: 1.5vw;
+}}
+@media screen and (max-device-width: 640px) {
+    .serv-btn {
+        position: relative;
+        left: -1vw;
+        top: 16.5vw;
+    }}  
+
+/* listing section query */
+@media screen and (max-device-width: 640px) {
+    .card {
+        width: 100vw;
+        position: relative;
+        top: -67vw;
+        left: 13vw;
+    }} 
+@media screen and (max-device-width: 640px) {
+    .list-rest {
+        margin-top: 21vw;
+        margin-bottom: 10vw;
+    }} 
+@media screen and (max-device-width: 640px) {
+    #listing {
+        margin-top: 20vw;
+        height: 222vw;
+        display: contents;
+    }} 
+    
+    /* partner section query */
+    
+@media screen and (max-device-width: 640px) {
+    #part-sec {
+        margin-top: -46vw;
+        margin-bottom: 14vw;
+    }} 
+@media screen and (max-device-width: 640px) {
+    h2.part-text{
+        font-size: xx-large;
+    }} 
+@media screen and (max-device-width: 640px) {
+    #burger-lab{
+        height: 17vw;
+        align-self: center;
+    }} 
+@media screen and (max-device-width: 640px) {
+    #swiggy{
+        height: 9vw;
+        align-self: center;
+    }} 
+@media screen and (max-device-width: 640px) {
+    #uber-eats{
+        height: 6vw;
+        align-self: center;
+    }} 
+@media screen and (max-device-width: 640px) {
+    #zomato{
+        height: 6vw;
+    align-self: center;
+    }} 
+
+/* get app */
+@media screen and (max-device-width: 640px) {
+.get-app {
+    height: 23vw;
+}} 
+@media screen and (max-device-width: 640px) {
+.get-app h2 {
+    font-family: 'Bree Serif';
+    width: 68vw;
+    font-size: calc(0.7rem + 1.2vw) !important;}} 
+
+/* google */
+@media screen and (max-device-width: 640px) {
+   img#google {
+        height: 12vw !important;
+    }} 
+@media screen and (max-device-width: 640px) {
+   img#app-store {
+    height: 9.5vw !important;
+    }} 
+
+
+
+/* 1075px viewport */
+@media screen and (max-device-width: 1075px) {
+    .get-app h2{
+        font-size: large;
+    }
+    }
+/* @media screen and (max-device-width: 1075px) {
+    .banner{
+        height: 444px;
+        margin-bottom: 11vw;
+    }} */
+    @media (min-width: 641px) and (max-width: 1075px) {
+        .banner{
+            height: 441px;
+            margin-bottom: 3vw;        
+        }}
+   
+    @media (min-width: 641px) and (max-width: 1075px) {
+        .ban-text{
+            width: 70vw;
+
+        }}
+    @media (min-width: 641px) and (max-width: 1075px) {
+        .about{
+            padding: 2px 29px 2px 29px;
+        }}
+    @media (min-width: 641px) and (max-width: 1075px) {
+        .card{
+            width: 60vw;
+        }}
+    @media (min-width: 641px) and (max-width: 1075px) {
+        .list-rest{
+            margin-top: 10vw;
+
+        }}
+
+
+
+
+
+/* 4k Viewport */
+    @media (min-width: 2560px){
+    .about {
+        margin-top: 19vw;
+        font-size: xx-large;
+        width: 80vw;
+        position: relative;
+        left: 10vw;
+        height: 23vw;
+    }}
+@media (min-width: 2560px) {
+    body {
+    font-size: 20px;
+    }
+    }
+@media (min-width: 2560px) {
+    .banner h1 {
+        color: white;
+        text-align: center;
+        font-family: "Protest Revolution", sans-serif;
+        font-size: 6.5rem;
+    }
+    }
+
+@media (min-width: 2560px) {
+    .banner p {
+        color: white;
+        text-align: center;
+        font-size: 2.5rem;
+        font-family: "Bree Serif", serif;
+    }
+    }
+
+@media (min-width: 2560px) {
+    .ban-text {
+        position: relative;
+        top: 7vw;
+    }
+    }
+@media (min-width: 2560px) {
+    .list-rest h2 {
+        margin-left: 5vw;
+        margin-bottom: 3vw;
+        font-size: xxx-large;
+    }
+    }
+@media (min-width: 2560px) {
+    h2.part-text {
+        font-size: 4rem;
+    }
+    }
+
+
+
+   
+    
+   

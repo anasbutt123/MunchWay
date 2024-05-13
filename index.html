@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MunchWay</title>
+    <link rel="stylesheet" href="css/style-index.css">
+    <link rel="stylesheet" href="css/style-form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <!-- navbar -->
+<div class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="">
+    </div>
+
+    <div class="nav-items">
+<ul>
+    <li class="item"><a href="#">Home</a></li>
+    <li class="item"><a href="cuisines.html">Cuisines</a></li>
+    <li class="item"><a href="about.html">About us</a></li>
+    <li class="item"><a href="listing.html">Get Listed</a></li>
+    <li class="item"><a href="">Contact us</a></li>
+</ul>
+    </div>
+</div>
+
+<!-- banner -->
+<section class="banner">
+<div class="ban-text">    
+<h1>Welcome to MunchWay</h1>
+<p>"Welcome to MunchWay, your one-stop shop for mouthwatering meals delivered with speed and satisfaction.</p>
+<p>MunchWay brings convenience and flavor to your fingertips!"</p>
+<button class="btn" onclick="toggleForm()">Order Now</button>
+
+</div>
+</section>
+
+<!-- signup form -->
+
+<div class="container">
+    <h1>SignUp to MunchWay</h1>
+    <button class="close-btn" onclick="closeForm()">×</button>
+<form>
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">SignUp</button>
+</form>
+</div>
+
+<!-- about section  -->
+<section class="about">
+<div class="abt-text">
+<h1>About MunchWay</h1>
+<p>Welcome to MunchWay, your ultimate destination for delicious and convenient dining! At MunchWay, we understand the importance of a good meal and the joy it brings. Our mission is to deliver culinary delights right to your doorstep, making every meal a delightful experience.
+</p>
+</div>
+</section>
+
+<!-- services areas -->
+<section class="service">
+<div class="cities">
+    <h2>Select Your City</h2>
+    <div>
+        <select id="citySelect" style="display: none;">
+            <option value="Karachi">Karachi</option>
+            <option value="Lahore">Lahore</option>
+            <option value="Islamabad">Islamabad</option>
+            <option value="Faisalabad">Faisalabad</option>
+            <option value="Rawalpindi">Rawalpindi</option>
+        </select>
+        <button onclick="toggleCities()">▼</button>
+    </div>
+</div>
+<div class="area">
+    <h2>Enter Your Area</h2>
+    <div>
+        <input type="text" id="areaInput" onclick="showTextarea()" placeholder="Click to enter your Area">
+    </div>
+</div>
+<div class="serv-btn">
+        <button id="searchButton" onclick="checkInputs()">Search</button>
+</div>
+</section>
+
+<!-- list your Restaurant -->
+<section id="listing">
+<div class="list-rest">
+    <h2>You prepare the food, we handle the rest</h2>
+    <img src="./images/home-vendor-pk.png" alt="">
+</div>
+<div class="card">
+    <div class="card-details">
+        <p class="text-title">List your restaurant on MunchWay</p>
+        <p class="text-body">Would you like millions of new customers to enjoy your amazing food and groceries? So would we!
+
+            It's simple: we list your menu and product lists online, help you process orders, pick them up, and deliver them to hungry pandas – in a heartbeat!
+            
+            Interested? Let's start our partnership today!</p>
+    </div>
+    <button class="card-button">Get Started</button>
+</div>
+</section>
+
+<!-- Our Partners -->
+
+<section id="part-sec">
+    <h2 class="part-text">Our Partners</h2>
+<div class="partner">
+    <img src="partners/Burger-lab-Logo.png" alt="" id="burger-lab">
+    <img src="partners/swiggy-logo.png" alt="" id="swiggy">
+    <img src="partners/uber-eats-logo.png" alt="" id="uber-eats">
+    <img src="partners/zomato-logo.png" alt="" id="zomato">
+</div>
+</section>
+
+<!-- Download APP -->
+
+<section class="get-app">
+<h2>For better experience,download the MunchWay app now</h2>
+<img src="images/google.png" alt="" id="google" style="height: 5vw;">
+<img src="images/app-store.png" alt="" id="app-store" style="height: 4.5vw;position: relative; top: 0.1vw;">
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+     function toggleCities() {
+            var select = document.getElementById("citySelect");
+            if (select.style.display === "none") {
+                select.style.display = "inline-block";
+            } else {
+                select.style.display = "none";
+            }
+        }
+
+        function showTextarea() {
+            var textarea = document.getElementById("areaTextarea");
+            textarea.style.display = "block";
+        }
+
+        function checkInputs() {
+            var city = document.getElementById("citySelect").value;
+            var area = document.getElementById("areaInput").value;
+            var button = document.getElementById("searchButton");
+
+            if (city === "" && area === "") {
+                alert("Please enter your city and area.");
+            } else if (city === "") {
+                alert("Please enter your city first.");
+            } else if (area === "") {
+                alert("Please enter your area first.");
+            } else {
+                button.disabled = true;
+            }
+        }
+
+
+        function toggleForm() {
+    var form = document.querySelector('.container');
+    form.style.display = (form.style.display === 'block') ? 'none' : 'block';
+}
+
+// // Close the form when clicked outside
+// window.addEventListener('click', function(event) {
+//     var form = document.querySelector('.container');
+//     if (event.target != form && event.target.parentNode != form && event.target.className != 'btn') {
+//         form.style.display = 'none';
+//     }
+// });
+// Close the form when clicked outside
+window.addEventListener('click', function(event) {
+    var form = document.querySelector('.container');
+    var button = document.getElementById('orderButton');
+    if (event.target != form && event.target != button && !form.contains(event.target) && event.target.className != 'btn') {
+        form.style.display = 'none';
+    }
+});
+// 'x' button for closing the form
+function closeForm() {
+    document.querySelector('.container').style.display = 'none';
+}
+
+
+
+
+        // document.body.style.zoom = "100%";
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+  
+  .container:hover {
+    animation: glow-in 0.7s linear forwards; /* Add glow-in animation on hover */
+  }
+  
+  .container:not(:hover) {
+    animation: glow-out 0.4s linear forwards; /* Add glow-out animation on hover out */
+  }
+  
+  @keyframes glow-in {
+    0% {
+      border-color: transparent; /* Start with a transparent border color */
+      box-shadow: none; /* Start with no box shadow */
+    }
+    50% {
+      border-color: #81c784; /* Midpoint of animation, halfway to full opacity */
+      box-shadow: 0 0 10px #81c784; /* Midpoint of animation, halfway to full opacity */
+    }
+    100% {
+      border-color: #81c784; /* Full opacity at the end of the animation */
+      box-shadow: 0 0 10px #81c784; /* Full opacity at the end of the animation */
+    }
+  }
+  
+  @keyframes glow-out {
+    0% {
+      border-color: #81c784; /* Start with full opacity */
+      box-shadow: 0 0 10px #81c784; /* Start with full opacity */
+    }
+    50% {
+      border-color: #81c784; /* Midpoint of animation, halfway to no opacity */
+      box-shadow: 0 0 10px #81c784; /* Midpoint of animation, halfway to no opacity */
+    }
+    100% {
+      border-color: transparent; /* No opacity at the end of the animation */
+      box-shadow: none; /* No opacity at the end of the animation */
+    }
+  }
+  
+ 
+  
+  
+  
+  
+  .container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Add transition for smooth hover effect */
+  }
+  #fullname{
+    width: 572px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* button:hover {
+    background-color: #0056b3;
+  } */
+  
+  /* Add hover effect for input fields */
+  input[type="text"]:hover,
+  input[type="email"]:hover,
+  input[type="password"]:hover {
+    border-color: #000; /* Change border color on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      margin: 20px;
+      padding: 10px;
+    }
+  }
+  
+/* new effect */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+  }
+  
+  .container {
+    /* width: min(100%,400px); */
+    display: none; /* Hide the form by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: min(100%,600px) !important;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: url(/images/form-bg.jpg);
+    /* background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px); */
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
